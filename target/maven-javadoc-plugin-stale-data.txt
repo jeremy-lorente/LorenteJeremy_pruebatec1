@@ -1,0 +1,60 @@
+@options
+@packages
+-classpath
+'C:/Users/Jeremy/.m2/repository/com/mysql/mysql-connector-j/8.0.33/mysql-connector-j-8.0.33.jar;C:/Users/Jeremy/.m2/repository/com/google/protobuf/protobuf-java/3.21.9/protobuf-java-3.21.9.jar;C:/Users/Jeremy/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.core/2.7.10/org.eclipse.persistence.core-2.7.10.jar;C:/Users/Jeremy/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.asm/9.2.0/org.eclipse.persistence.asm-9.2.0.jar;C:/Users/Jeremy/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.antlr/2.7.10/org.eclipse.persistence.antlr-2.7.10.jar;C:/Users/Jeremy/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.jpa/2.7.10/org.eclipse.persistence.jpa-2.7.10.jar;C:/Users/Jeremy/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.jpa.jpql/2.7.10/org.eclipse.persistence.jpa.jpql-2.7.10.jar;C:/Users/Jeremy/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.moxy/2.7.10/org.eclipse.persistence.moxy-2.7.10.jar;C:/Users/Jeremy/.m2/repository/org/eclipse/persistence/jakarta.persistence/2.2.3/jakarta.persistence-2.2.3.jar;C:/Users/Jeremy/.m2/repository/org/eclipse/persistence/org.eclipse.persistence.jpa.modelgen.processor/2.7.10/org.eclipse.persistence.jpa.modelgen.processor-2.7.10.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'17'
+-sourcepath
+'E:/netbeansProject/LorenteJeremy_pruebaTec1/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2023. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'E:/netbeansProject/LorenteJeremy_pruebaTec1/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'LorenteJeremy_pruebaTec1 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'LorenteJeremy_pruebaTec1 1.0-SNAPSHOT API'
+com.lorente.jeremy
+com.lorente.jeremy.modelos
+com.lorente.jeremy.persistencia
+com.lorente.jeremy.persistencia.exceptions
+com.lorente.jeremy.servicios
+C:\Users\Jeremy\.m2\repository\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar = 1703173026039
+C:\Users\Jeremy\.m2\repository\com\google\protobuf\protobuf-java\3.21.9\protobuf-java-3.21.9.jar = 1703173026105
+C:\Users\Jeremy\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.core\2.7.10\org.eclipse.persistence.core-2.7.10.jar = 1703271036208
+C:\Users\Jeremy\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.asm\9.2.0\org.eclipse.persistence.asm-9.2.0.jar = 1703271036112
+C:\Users\Jeremy\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.antlr\2.7.10\org.eclipse.persistence.antlr-2.7.10.jar = 1703271036100
+C:\Users\Jeremy\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.jpa\2.7.10\org.eclipse.persistence.jpa-2.7.10.jar = 1703271036150
+C:\Users\Jeremy\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.jpa.jpql\2.7.10\org.eclipse.persistence.jpa.jpql-2.7.10.jar = 1703271036148
+C:\Users\Jeremy\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.moxy\2.7.10\org.eclipse.persistence.moxy-2.7.10.jar = 1703271036183
+C:\Users\Jeremy\.m2\repository\org\eclipse\persistence\jakarta.persistence\2.2.3\jakarta.persistence-2.2.3.jar = 1703271036175
+C:\Users\Jeremy\.m2\repository\org\eclipse\persistence\org.eclipse.persistence.jpa.modelgen.processor\2.7.10\org.eclipse.persistence.jpa.modelgen.processor-2.7.10.jar = 1703271036323
+E:\netbeansProject\LorenteJeremy_pruebaTec1\src\main\java = 1703676452405
+E:\netbeansProject\LorenteJeremy_pruebaTec1\target\site\apidocs\allclasses-index.html = 1703708209218
+E:\netbeansProject\LorenteJeremy_pruebaTec1\target\site\apidocs\allpackages-index.html = 1703708209220
+E:\netbeansProject\LorenteJeremy_pruebaTec1\target\site\apidocs\element-list = 1703708209095
+E:\netbeansProject\LorenteJeremy_pruebaTec1\target\site\apidocs\help-doc.html = 1703708209240
+E:\netbeansProject\LorenteJeremy_pruebaTec1\target\site\apidocs\index-all.html = 1703708209235
+E:\netbeansProject\LorenteJeremy_pruebaTec1\target\site\apidocs\index.html = 1703708209197
+E:\netbeansProject\LorenteJeremy_pruebaTec1\target\site\apidocs\jquery-ui.overrides.css = 1703708209253
+E:\netbeansProject\LorenteJeremy_pruebaTec1\target\site\apidocs\member-search-index.js = 1703708209224
+E:\netbeansProject\LorenteJeremy_pruebaTec1\target\site\apidocs\module-search-index.js = 1703708209221
+E:\netbeansProject\LorenteJeremy_pruebaTec1\target\site\apidocs\overview-summary.html = 1703708209236
+E:\netbeansProject\LorenteJeremy_pruebaTec1\target\site\apidocs\overview-tree.html = 1703708209194
+E:\netbeansProject\LorenteJeremy_pruebaTec1\target\site\apidocs\package-search-index.js = 1703708209221
+E:\netbeansProject\LorenteJeremy_pruebaTec1\target\site\apidocs\script.js = 1703708209243
+E:\netbeansProject\LorenteJeremy_pruebaTec1\target\site\apidocs\search.js = 1703708209245
+E:\netbeansProject\LorenteJeremy_pruebaTec1\target\site\apidocs\serialized-form.html = 1703708209149
+E:\netbeansProject\LorenteJeremy_pruebaTec1\target\site\apidocs\stylesheet.css = 1703708209242
+E:\netbeansProject\LorenteJeremy_pruebaTec1\target\site\apidocs\tag-search-index.js = 1703708209225
+E:\netbeansProject\LorenteJeremy_pruebaTec1\target\site\apidocs\type-search-index.js = 1703708209223
