@@ -43,7 +43,7 @@ public class EmpleadoJpaController implements Serializable {
     }
 
     /**
-     * Crea un nuevo registro de empleado en la BD.
+     * Crea un nuevo registro de empleado en la BD si el DNI no existe
      *
      * @param empleado Objeto Empleado que se creara en la BD.
      */
@@ -51,6 +51,11 @@ public class EmpleadoJpaController implements Serializable {
         EntityManager em = null;
         try {
             em = getEntityManager();
+
+            if (existEmpleadoDni(empleado.getDni())) {
+                return;
+            }
+
             em.getTransaction().begin();
             em.persist(empleado);
             em.getTransaction().commit();
@@ -198,4 +203,17 @@ public class EmpleadoJpaController implements Serializable {
         }
     }
 
+    /**
+     * Metodo que cuenta el numero de empleados con X dni
+     *
+     * @return Boleano para verificar si ya hay un registro
+     */
+    public boolean existEmpleadoDni(String dni) {
+        EntityManager em = getEntityManager();
+        Long count = (Long) em.createQuery("SELECT COUNT(e) FROM Empleado e WHERE e.dni= :dni")
+                .setParameter("dni", dni)
+                .getSingleResult();
+
+        return count > 0;
+    }
 }

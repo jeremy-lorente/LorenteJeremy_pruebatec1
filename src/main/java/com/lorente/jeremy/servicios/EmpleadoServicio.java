@@ -30,7 +30,8 @@ public class EmpleadoServicio {
         System.out.println("=========================================");
         System.out.println("           Creacion de Empleado          ");
         System.out.println("=========================================");
-
+        System.out.println("Ingrese el Dni del empleado (9 caracteres)");
+        String empleadoDni = validarDni(sc.nextLine()).toUpperCase();
         System.out.println("Ingresa el nombre del empleado");
         String empleadoNombre = validarString(sc.nextLine());
         System.out.println("Ingresa el apellido del empleado");
@@ -42,12 +43,18 @@ public class EmpleadoServicio {
 
         LocalDate empleadoFechaInicio = validarFecha(sc);
 
-        Empleado empleadoACrear = new Empleado(empleadoNombre, empleadoApellido, empleadoCargo, empleadoSalario, empleadoFechaInicio);
+        Empleado empleadoACrear = new Empleado(empleadoDni, empleadoNombre, empleadoApellido, empleadoCargo, empleadoSalario, empleadoFechaInicio);
 
         System.out.println("\nCreando Empleado...");
         System.out.println("=========================================");
-        empleadoController.create(empleadoACrear);
-        System.out.println("Empleado creado correctamente");
+
+        if (empleadoController.existEmpleadoDni(empleadoDni)) {
+            System.out.println("No se ha podido crear, ya existe un empleado con ese DNI. ");
+        } else {
+            empleadoController.create(empleadoACrear);
+            System.out.println("Empleado creado correctamente");
+        }
+
     }
 
     /**
@@ -55,7 +62,7 @@ public class EmpleadoServicio {
      */
     public void borrarEmpleado() {
         System.out.println("=========================================");
-        System.out.println("      Eliminacion de Empleado Por ID      ");
+        System.out.println("      Eliminacion de Empleado Por ID     ");
         System.out.println("=========================================");
         System.out.println("Ingresa el ID del empleado a eliminar");
 
@@ -88,6 +95,7 @@ public class EmpleadoServicio {
         } else {
             for (Empleado empleado : listaEmpleados) {
                 System.out.println("ID: " + empleado.getId());
+                System.out.println("DNI: " + empleado.getDni());
                 System.out.println("Nombre: " + empleado.getNombre());
                 System.out.println("Apellido: " + empleado.getApellido());
                 System.out.println("Cargo: " + empleado.getCargo());
@@ -119,6 +127,7 @@ public class EmpleadoServicio {
         } else {
             for (Empleado empleado : listaEmpleados) {
                 System.out.println("ID: " + empleado.getId());
+                System.out.println("DNI: " + empleado.getDni());
                 System.out.println("Nombre: " + empleado.getNombre());
                 System.out.println("Apellido: " + empleado.getApellido());
                 System.out.println("Cargo: " + empleado.getCargo());
@@ -143,6 +152,8 @@ public class EmpleadoServicio {
 
         if (empleadoController.findEmpleado(id) != null) {
             try {
+                System.out.println("Ingrese el nuevo Dni del empleado (9 caracteres)");
+                String empleadoDni = validarDni(sc.nextLine()).toUpperCase();
                 System.out.println("Ingresa el nuevo nombre del empleado");
                 String empleadoNombre = validarString(sc.nextLine());
                 System.out.println("Ingresa el nuevo apellido del empleado");
@@ -155,6 +166,7 @@ public class EmpleadoServicio {
                 LocalDate empleadoFechaInicio = validarFecha(sc);
 
                 Empleado empleadoAModificar = empleadoController.findEmpleado(id);
+                empleadoAModificar.setDni(empleadoDni);
                 empleadoAModificar.setNombre(empleadoNombre);
                 empleadoAModificar.setApellido(empleadoApellido);
                 empleadoAModificar.setCargo(empleadoCargo);
@@ -183,6 +195,21 @@ public class EmpleadoServicio {
     private String validarString(String string) {
         while (string == null || string.trim().isEmpty()) {
             System.out.println("El campo no puede estar vacio. Por favor ingrese un valor valido");
+            string = sc.nextLine();
+        }
+        return string.trim();
+    }
+
+    /**
+     * Valida que la entrada de datos de tipo String no este vacia y cumpla con
+     * la longitud
+     *
+     * @param string El valor a validar.
+     * @return El valor valido sin espacios al inicio y al final.
+     */
+    private String validarDni(String string) {
+        while (string == null || string.trim().isEmpty() || string.trim().length() != 9) {
+            System.out.println("El campo no puede estar vacio o tener una longitud distinta a 9.\nPor favor ingrese un valor valido");
             string = sc.nextLine();
         }
         return string.trim();
@@ -233,7 +260,11 @@ public class EmpleadoServicio {
                 System.out.println("Ingresa la fecha de inicio del empleado(yyyy-MM-dd)");
                 String fechaInicioStr = sc.nextLine();
                 fecha = LocalDate.parse(fechaInicioStr, patron);
-                valido = true;
+                if (fecha.isAfter(LocalDate.now())) {
+                    System.out.println("La fecha no puede ser mayor a la fecha actual");
+                } else {
+                    valido = true;
+                }
             } catch (Exception e) {
                 System.out.println("Error al convertir la fecha. Asegurese de usar el formato correcto (yyyy-MM-dd) ");
             }

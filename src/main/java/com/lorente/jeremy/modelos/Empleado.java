@@ -8,9 +8,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * Clase Empleado representa a un empleado en la aplicacion.
- * Contiene informacion como el id, el nombre, apellido, cargo, salario y fecha de inicio
- * del empleado.
+ * Clase Empleado representa a un empleado en la aplicacion. Contiene
+ * informacion como el id, el dni, el nombre, apellido, cargo, salario y fecha
+ * de inicio del empleado.
  *
  */
 @Entity
@@ -24,12 +24,14 @@ public class Empleado implements Serializable {
     private String cargo;
     private double salario;
     private LocalDate fechaInicio;
+    private String dni;
 
     public Empleado() {
     }
 
-    public Empleado(String nombre, String apellido, String cargo, double salario, LocalDate fechaInicio) {
+    public Empleado(String dni, String nombre, String apellido, String cargo, double salario, LocalDate fechaInicio) {
 
+        this.dni = dni;
         this.nombre = nombre;
         this.apellido = apellido;
         this.cargo = cargo;
@@ -85,9 +87,11 @@ public class Empleado implements Serializable {
         this.fechaInicio = fechaInicio;
     }
 
-    @Override
-    public String toString() {
-        return "Empleado{" + "id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", cargo=" + cargo + ", salario=" + salario + ", fechaInicio=" + fechaInicio + '}';
+    public String getDni() {
+        return dni;
     }
 
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
 }
