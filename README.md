@@ -25,7 +25,7 @@
 >		- Lista todos los registros dentro de la base de datos, que posean el mismo cargo.
 >	- Salir 
 
-## CASOS SUPUESTOS 
+## Casos Supuestos
 > [!WARNING]
 > - Formato de Fecha Estandar:
 >   - Se supone que las fechas ingresadas siguen el formato "yyyy-MM-dd" en caso contrario el programa seguira solicitando el ingreso de una fecha valida.
