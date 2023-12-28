@@ -17,11 +17,11 @@
 > - Ejecute el programa y mostrara un menu con 5 opciones:
 >	- Crear Empleados:
 >		- Permite la creación de nuevos empleados en la base de datos, verificando que su DNI no existe.
->	- Listar Empleados
+>	- Listar Empleados:
 >		- Muestra todos los registros de la tabla empleado de la base de datos.
->	- Borrar Empleados
+>	- Borrar Empleados:
 >		- Haciendo uso de la ID borra el registro de la base de datos.
->	- Listar Empleados por Cargo
+>	- Listar Empleados por Cargo:
 >		- Lista todos los registros dentro de la base de datos, que posean el mismo cargo.
 >	- Salir 
 
